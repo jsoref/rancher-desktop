@@ -1,0 +1,40 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# GitHub SHAs
+\bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+(?:\[[0-9a-f]+\]\(https:/|)/(?:www\.|)github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+\bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&amp;=_\/.]*
+# gist github
+/gist\.github\.com/[^/]+/[0-9a-f]+
+# git.io
+\bgit\.io/[0-9a-zA-Z]+
+# GitHub JSON
+&quot;node_id&quot;: &quot;[-a-zA-Z=;:/0-9+]*&quot;
+# Contributor
+\[[^\]]+]\(https://github\.com/[^/]+\)
+# GHSA
+GHSA(?:-[0-9a-z]{4}){3}
+
+# sha256
+sha256:\s*[0-9a-f]+
+
+\b[0-9a-f]{32}\b
+
+# CVE
+VulnerabilityID"?: "?(?:CVE|TEMP)-\d+-[0-9A-F]+
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+
+E2E
+
+# typo
+ typo .*?"[^"]+"
+
+# version suffix &lt;word&gt;v#
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
