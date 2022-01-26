@@ -206,7 +206,7 @@ authConfig:
       app:
         label: 应用名称
         value: '输入一个应用名称，例如：我的{vendor}'
-      calllback:
+      callback:
         label: 授权回调URL
       description:
         label: 应用描述
@@ -1102,7 +1102,7 @@ hpa:
       targetName: 目标名称
       value: 值
     source: 数据源
-  objectReferance:
+  objectReference:
     api:
       label: 引用的API版本
       placeholder: 例如：apps/v1beta1
@@ -2203,7 +2203,7 @@ probe:
     port:
       label: 检查端口
       placeholder: 例如：80
-      placeholderDuex: 例如：25
+      placeholderDeux: 例如：25
   initialDelay:
     label: 初始延迟
     placeholder: '默认值是'
@@ -3258,10 +3258,10 @@ validation:
       name:
         required: "端口规则 [{position}] - 端口名称是必填项"
       nodePort:
-        requriedInt: "端口规则 [{position}] - 如果包含节点端口，则节点端口必须是整数值，例如：80"
+        requiredInt: "端口规则 [{position}] - 如果包含节点端口，则节点端口必须是整数值，例如：80"
       port:
         required: "端口规则 [{position}] - 端口是必填项"
-        requriedInt: "端口规则 [{position}] - 如果包含端口，则端口必须是整数值，例如：80"
+        requiredInt: "端口规则 [{position}] - 如果包含端口，则端口必须是整数值，例如：80"
       targetPort:
         between: "端口规则 [{position}] - 目标端口的取值范围是： 1~65535"
         iana: "端口规则 [{position}] - 目标端口必须是 IANA 服务名称或整数值"
