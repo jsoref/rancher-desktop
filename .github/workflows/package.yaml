@@ -17,6 +17,7 @@ defaults:
 jobs:
   package:
     strategy:
+      fail-fast: false
       matrix:
         os:
         - macos-10.15 # Intel build with Intel assets
